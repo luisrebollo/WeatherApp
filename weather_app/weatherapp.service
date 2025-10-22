@@ -1,0 +1,16 @@
+[Unit]
+Description=WeatherAPI Rebollo Service
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/weather_app/weatherapp
+
+WorkingDirectory=/home/ubuntu/weather_app
+Restart=always
+RestartSec=5
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
